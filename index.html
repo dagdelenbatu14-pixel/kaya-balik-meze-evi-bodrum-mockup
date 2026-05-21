@@ -149,6 +149,21 @@ section { padding: clamp(80px, 14vw, 160px) 0; }
 .foot { background: var(--aegean-2); color: rgba(246,239,225,.55); padding: 32px 0; font-size: .82rem; }
 .foot__inner { display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
 
+.cephe { position: relative; height: clamp(360px, 56vw, 580px); overflow: hidden; }
+.cephe__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.cephe::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(15,47,58,.15) 0%, rgba(15,47,58,.55) 70%, rgba(15,47,58,.85) 100%); }
+.cephe__inner { position: relative; z-index: 2; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; padding-bottom: clamp(40px, 8vw, 80px); }
+.cephe__eyebrow { font-size: .72rem; letter-spacing: .32em; text-transform: uppercase; color: #e8d4a8; margin: 0 0 16px; }
+.cephe__title { font-family: var(--f-display); font-weight: 400; font-style: italic; font-size: clamp(2rem, 5vw, 3.4rem); line-height: 1.1; color: var(--paper); margin: 0; max-width: 720px; }
+
+.gallery { background: var(--paper); padding-bottom: clamp(60px, 10vw, 120px); }
+.gallery__grid { display: grid; grid-template-columns: repeat(4, 1fr); grid-template-rows: 300px 300px; gap: 14px; }
+.gallery__item { position: relative; overflow: hidden; background: var(--sand); }
+.gallery__item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .8s ease; }
+.gallery__item:hover img { transform: scale(1.04); }
+.gallery__item.big { grid-column: span 2; grid-row: span 2; }
+.gallery__item.sq { grid-column: span 1; grid-row: span 1; }
+
 .reveal { opacity: 0; transform: translateY(20px); transition: opacity .9s ease, transform .9s ease; }
 .reveal.in { opacity: 1; transform: none; }
 
@@ -158,6 +173,9 @@ section { padding: clamp(80px, 14vw, 160px) 0; }
   .about__grid { grid-template-columns: 1fr; }
   .hero__divider { grid-template-columns: 1fr 1fr; gap: 16px; }
   .nav__cta { display: none; }
+  .gallery__grid { grid-template-columns: repeat(2, 1fr); grid-template-rows: auto; }
+  .gallery__item, .gallery__item.big, .gallery__item.tall, .gallery__item.wide, .gallery__item.sq { grid-column: span 1; grid-row: span 1; height: 220px; }
+  .gallery__item.big { grid-column: span 2; height: 280px; }
 }
 @media (prefers-reduced-motion: reduce) { *, ::before, ::after { transition: none !important; } }
 </style>
@@ -194,6 +212,14 @@ section { padding: clamp(80px, 14vw, 160px) 0; }
       <div><dt>Kapasite</dt><dd>60 kişi</dd></div>
       <div><dt>Saat</dt><dd>11:00 — 02:00</dd></div>
     </dl>
+  </div>
+</section>
+
+<section class="cephe">
+  <img class="cephe__img" src="images/cephe.jpg" alt="Kaya Balık Meze Evi · Eskiçeşme cephe"/>
+  <div class="wrap cephe__inner">
+    <p class="cephe__eyebrow">Eskiçeşme · Büyük İskender Cd.</p>
+    <h2 class="cephe__title">2009'dan beri, aynı sokak, aynı sofra.</h2>
   </div>
 </section>
 
@@ -304,6 +330,23 @@ section { padding: clamp(80px, 14vw, 160px) 0; }
         <div><dt>Rezervasyon</dt><dd>Tavsiye edilir</dd></div>
       </dl>
     </aside>
+  </div>
+</section>
+
+<section class="gallery">
+  <div class="wrap">
+    <header class="section-head">
+      <span class="eyebrow">Mekan</span>
+      <h2>Sofradan <em>birkaç kare.</em></h2>
+      <p>Mezeden balığa, rakıdan gece cephesine — bir akşamın bıraktığı izler.</p>
+    </header>
+    <div class="gallery__grid">
+      <div class="gallery__item big reveal"><img src="images/balik.jpg" alt="Izgara balık · şefin tezgâhından" loading="lazy"/></div>
+      <div class="gallery__item sq reveal"><img src="images/raki.jpg" alt="Yeni Rakı · buzlu kova" loading="lazy"/></div>
+      <div class="gallery__item sq reveal"><img src="images/mezeler.jpg" alt="Meze tabağı · beyaz peynir, börülce, cacık" loading="lazy"/></div>
+      <div class="gallery__item sq reveal"><img src="images/balik-tabak.jpg" alt="Kızarmış barbun · salata sofrası" loading="lazy"/></div>
+      <div class="gallery__item sq reveal"><img src="images/cephe-gece.jpg" alt="Cephe · gece" loading="lazy"/></div>
+    </div>
   </div>
 </section>
 
