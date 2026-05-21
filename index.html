@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<title>Kaya Balık Meze Evi · Eskiçeşme, Bodrum · A Seafood House</title>
+<meta name="description" content="Eskiçeşme'de günlük taze balık, yirmi çeşit meze ve buz gibi rakı. Bodrum'un sakin balık sofralarından biri · Türkçe & English."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Kaya Balık Meze Evi",
+  "image": "",
+  "servesCuisine": ["Balık", "Meze", "Türk", "Ege"],
+  "priceRange": "₺₺₺",
+  "telephone": "+90 543 954 65 42",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Eskiçeşme, Büyük İskender Cd. No:27.A D:1",
+    "addressLocality": "Bodrum",
+    "addressRegion": "Muğla",
+    "postalCode": "48400",
+    "addressCountry": "TR"
+  },
+  "openingHours": "Mo-Su 11:00-02:00",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.4",
+    "reviewCount": "113"
+  }
+}
+</script>
+<style>
+:root {
+  --paper: #f6efe1;
+  --sand: #ecdfc6;
+  --aegean: #1b4654;
+  --aegean-2: #0f2f3a;
+  --brass: #b78a3a;
+  --brass-2: #8a6526;
+  --ink: #112229;
+  --line: rgba(17,34,41,.12);
+  --pad: clamp(20px, 5vw, 64px);
+  --max: 1260px;
+  --f-display: "Cormorant Garamond", serif;
+  --f-body: "Inter", system-ui, sans-serif;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: var(--f-body); color: var(--ink); background: var(--paper); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+a { color: inherit; }
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); }
+section { padding: clamp(80px, 14vw, 160px) 0; }
+
+.nav { position: sticky; top: 0; z-index: 30; background: rgba(246,239,225,.94); backdrop-filter: blur(12px); padding: 18px 0; border-bottom: 1px solid var(--line); }
+.nav__inner { display: flex; align-items: center; justify-content: space-between; }
+.brand { font-family: var(--f-display); font-style: italic; font-weight: 500; font-size: 1.5rem; color: var(--aegean); text-decoration: none; line-height: 1; }
+.brand small { display: block; font-family: var(--f-body); font-style: normal; font-size: .64rem; letter-spacing: .3em; text-transform: uppercase; opacity: .6; margin-top: 4px; color: var(--brass-2); }
+.lang { display: inline-flex; align-items: center; gap: 10px; }
+.lang button { font-size: .76rem; padding: 6px 12px; border: 1px solid var(--line); background: transparent; color: rgba(17,34,41,.55); border-radius: 999px; cursor: pointer; letter-spacing: .1em; text-transform: uppercase; font-family: var(--f-body); }
+.lang button.is-active { background: var(--aegean); color: var(--paper); border-color: var(--aegean); }
+.nav__cta { font-size: .8rem; padding: 11px 24px; background: var(--aegean); color: var(--paper); text-decoration: none; letter-spacing: .12em; text-transform: uppercase; font-weight: 500; border-radius: 999px; margin-left: 16px; }
+
+.hero { padding: clamp(80px, 14vw, 160px) 0 clamp(60px, 10vw, 120px); background: var(--sand); position: relative; overflow: hidden; }
+.hero::before { content: ''; position: absolute; bottom: -160px; right: -160px; width: 520px; height: 520px; border-radius: 50%; background: radial-gradient(circle, rgba(27,70,84,.14), transparent 70%); pointer-events: none; }
+.hero::after { content: ''; position: absolute; top: -120px; left: -120px; width: 360px; height: 360px; border-radius: 50%; background: radial-gradient(circle, rgba(183,138,58,.18), transparent 70%); pointer-events: none; }
+.hero__eyebrow { font-size: .72rem; letter-spacing: .32em; text-transform: uppercase; color: var(--brass-2); margin: 0 0 32px; position: relative; }
+.hero h1 { font-family: var(--f-display); font-weight: 400; font-size: clamp(2.6rem, 7vw, 5.6rem); line-height: 1.04; margin: 0 0 16px; max-width: 980px; letter-spacing: -0.005em; position: relative; }
+.hero h1 em { font-style: italic; color: var(--aegean); }
+.hero h1 .tr { display: block; font-size: 0.62em; color: rgba(17,34,41,.55); font-style: italic; font-weight: 400; margin-top: 14px; letter-spacing: 0; }
+.hero__sub { font-size: 1.12rem; max-width: 600px; color: rgba(17,34,41,.78); margin: 32px 0 44px; position: relative; }
+.cta-row { display: flex; gap: 14px; flex-wrap: wrap; position: relative; }
+.btn { display: inline-flex; align-items: center; gap: 10px; padding: 16px 32px; text-decoration: none; font-size: .85rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; transition: background .2s ease, color .2s ease, border-color .2s ease; border-radius: 0; border: 0; cursor: pointer; }
+.btn-primary { background: var(--aegean); color: var(--paper); }
+.btn-primary:hover { background: var(--aegean-2); }
+.btn-ghost { color: var(--aegean); border: 1px solid var(--aegean); background: transparent; }
+.btn-ghost:hover { background: var(--aegean); color: var(--paper); }
+
+.hero__divider { margin-top: 88px; padding-top: 32px; border-top: 1px solid var(--line); display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; position: relative; }
+.hero__divider > div { display: flex; flex-direction: column; gap: 6px; }
+.hero__divider dt { font-size: .66rem; letter-spacing: .24em; text-transform: uppercase; color: rgba(17,34,41,.5); }
+.hero__divider dd { margin: 0; font-family: var(--f-display); font-style: italic; font-size: 1.5rem; color: var(--aegean); }
+
+.section-head { max-width: 720px; margin: 0 auto 80px; text-align: center; }
+.section-head .eyebrow { font-size: .72rem; letter-spacing: .32em; text-transform: uppercase; color: var(--brass-2); margin: 0 0 18px; }
+.section-head h2 { font-family: var(--f-display); font-weight: 400; font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 1.08; margin: 0 0 18px; }
+.section-head h2 em { font-style: italic; color: var(--aegean); }
+.section-head p { color: rgba(17,34,41,.7); max-width: 520px; margin: 0 auto; font-size: 1.05rem; }
+.section-head p em { font-style: italic; color: var(--brass-2); }
+
+.services { background: var(--paper); }
+.services__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.service { padding: 44px 36px; background: var(--sand); position: relative; }
+.service__num { font-family: var(--f-display); font-style: italic; font-size: 1.2rem; color: var(--brass); margin-bottom: 22px; letter-spacing: .08em; }
+.service h3 { font-family: var(--f-display); font-weight: 500; font-size: 1.7rem; margin: 0 0 12px; color: var(--aegean); }
+.service p { color: rgba(17,34,41,.74); font-size: .96rem; margin: 0 0 24px; }
+.service ul { list-style: none; padding: 0; margin: 0; }
+.service li { padding: 10px 0; border-top: 1px solid rgba(17,34,41,.1); font-size: .9rem; color: rgba(17,34,41,.78); display: flex; justify-content: space-between; gap: 12px; }
+.service li:first-child { border-top: 0; padding-top: 0; }
+.service li i { font-style: italic; color: var(--brass-2); font-family: var(--f-display); font-size: 1rem; opacity: .8; }
+
+.timeline { background: var(--aegean); color: var(--paper); position: relative; overflow: hidden; }
+.timeline::before { content: ''; position: absolute; top: -200px; right: -200px; width: 500px; height: 500px; border-radius: 50%; background: radial-gradient(circle, rgba(183,138,58,.18), transparent 70%); pointer-events: none; }
+.timeline .section-head h2, .timeline .section-head .eyebrow, .timeline .section-head p { color: var(--paper); position: relative; }
+.timeline .section-head h2 em { color: #e8d4a8; }
+.timeline .section-head .eyebrow { color: #e8d4a8; opacity: .85; }
+.timeline__grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 24px; position: relative; }
+.tl { padding-top: 24px; border-top: 1px solid rgba(246,239,225,.22); }
+.tl__time { font-family: var(--f-display); font-style: italic; font-size: 1.55rem; color: #e8d4a8; margin-bottom: 8px; }
+.tl__title { font-size: .82rem; letter-spacing: .14em; text-transform: uppercase; color: rgba(246,239,225,.88); margin-bottom: 14px; }
+.tl__desc { font-size: .88rem; color: rgba(246,239,225,.7); }
+
+.about { background: var(--sand); }
+.about__grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(48px, 8vw, 120px); align-items: center; }
+.about__text .eyebrow { font-size: .72rem; letter-spacing: .32em; text-transform: uppercase; color: var(--brass-2); margin: 0 0 18px; display: block; }
+.about__text h2 { font-family: var(--f-display); font-weight: 400; font-size: clamp(2.2rem, 4.5vw, 3.2rem); line-height: 1.1; margin: 0 0 22px; }
+.about__text h2 em { font-style: italic; color: var(--aegean); }
+.about__text p { color: rgba(17,34,41,.82); font-size: 1.08rem; margin: 1em 0; max-width: 480px; }
+.about__panel { background: var(--paper); border: 1px solid var(--line); padding: 44px; position: relative; }
+.about__panel::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--brass); }
+.about__panel h4 { font-family: var(--f-display); font-style: italic; font-size: 1.5rem; margin: 0 0 6px; color: var(--aegean); }
+.about__panel small { font-size: .76rem; letter-spacing: .16em; text-transform: uppercase; color: rgba(17,34,41,.55); display: block; margin-bottom: 28px; }
+.about__panel dl { display: grid; grid-template-columns: 1fr; gap: 14px; margin: 0; }
+.about__panel dl > div { display: flex; justify-content: space-between; padding-bottom: 12px; border-bottom: 1px solid var(--line); gap: 16px; }
+.about__panel dl > div:last-child { border-bottom: 0; padding-bottom: 0; }
+.about__panel dt { font-size: .76rem; letter-spacing: .14em; text-transform: uppercase; color: rgba(17,34,41,.55); }
+.about__panel dd { margin: 0; font-family: var(--f-display); font-style: italic; font-size: 1.2rem; color: var(--aegean); text-align: right; }
+
+.proof { background: var(--paper); }
+.proof__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 8px; }
+.quote { padding: 36px 32px; background: var(--sand); border-top: 3px solid var(--brass); }
+.quote p { font-family: var(--f-display); font-style: italic; font-size: 1.2rem; line-height: 1.5; margin: 0 0 22px; color: var(--ink); }
+.quote footer { font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; color: rgba(17,34,41,.55); }
+
+.final { background: var(--aegean); color: var(--paper); text-align: center; position: relative; overflow: hidden; }
+.final::before { content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 800px; height: 800px; border-radius: 50%; background: radial-gradient(circle, rgba(183,138,58,.14), transparent 60%); pointer-events: none; }
+.final h2 { font-family: var(--f-display); font-weight: 400; font-size: clamp(2.4rem, 5.5vw, 4.2rem); line-height: 1.05; margin: 0 auto 22px; max-width: 820px; color: var(--paper); position: relative; }
+.final h2 em { font-style: italic; color: #e8d4a8; }
+.final p { color: rgba(246,239,225,.84); font-size: 1.08rem; margin: 0 auto 40px; max-width: 520px; position: relative; }
+.final .cta-row { justify-content: center; position: relative; }
+.final .btn-primary { background: #e8d4a8; color: var(--aegean-2); }
+.final .btn-primary:hover { background: var(--paper); }
+.final .btn-ghost { color: var(--paper); border-color: var(--paper); }
+.final .btn-ghost:hover { background: var(--paper); color: var(--aegean); }
+
+.foot { background: var(--aegean-2); color: rgba(246,239,225,.55); padding: 32px 0; font-size: .82rem; }
+.foot__inner { display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+
+.reveal { opacity: 0; transform: translateY(20px); transition: opacity .9s ease, transform .9s ease; }
+.reveal.in { opacity: 1; transform: none; }
+
+@media (max-width: 900px) {
+  .services__grid, .proof__grid { grid-template-columns: 1fr; }
+  .timeline__grid { grid-template-columns: 1fr 1fr; }
+  .about__grid { grid-template-columns: 1fr; }
+  .hero__divider { grid-template-columns: 1fr 1fr; gap: 16px; }
+  .nav__cta { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { *, ::before, ::after { transition: none !important; } }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav__inner">
+    <a class="brand" href="#top">Kaya<small>Balık &middot; Meze Evi · Eskiçeşme</small></a>
+    <div style="display:flex; align-items:center;">
+      <div class="lang">
+        <button class="is-active">TR</button>
+        <button>EN</button>
+      </div>
+      <a class="nav__cta" href="#iletisim">Masa Ayır</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="wrap">
+    <p class="hero__eyebrow">Eskiçeşme · Bodrum · Balık &amp; Meze · 2009'dan beri</p>
+    <h1>Mezeden başlayan, <em>levrekle</em> biten bir akşam.
+      <span class="tr">From meze to sea bass — a quiet Bodrum night.</span>
+    </h1>
+    <p class="hero__sub">Eskiçeşme'nin sokağında, marinaya iki sokak; günlük taze balık, yirmi iki çeşit meze ve buz gibi rakıyla başlayan, gece ikiye kadar süren bir sofra.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#iletisim">Masa Ayır</a>
+      <a class="btn btn-ghost" href="#menu">Menüyü Görün</a>
+    </div>
+    <dl class="hero__divider">
+      <div><dt>Kuruluş</dt><dd>2009</dd></div>
+      <div><dt>Meze</dt><dd>22 çeşit</dd></div>
+      <div><dt>Kapasite</dt><dd>60 kişi</dd></div>
+      <div><dt>Saat</dt><dd>11:00 — 02:00</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="services" id="menu">
+  <div class="wrap">
+    <header class="section-head">
+      <span class="eyebrow">Sofra</span>
+      <h2>Üç hâl, bir <em>akşam.</em></h2>
+      <p>Mezeden balığa, balıktan son rakıya — sofranın akışı yıllar içinde böyle oturdu.</p>
+    </header>
+    <div class="services__grid">
+      <article class="service reveal">
+        <div class="service__num">— I.</div>
+        <h3>Mezeler</h3>
+        <p>Sabahları el yapımı, soğuk-sıcak ayrı tezgâhta. Yirmi iki çeşit, mevsime göre değişir.</p>
+        <ul>
+          <li>Ahtapot Salatası <i>· soğuk</i></li>
+          <li>Lakerda <i>· yıllanmış</i></li>
+          <li>Çiroz <i>· evde kurutma</i></li>
+          <li>Patlıcan Ezme <i>· köz</i></li>
+          <li>Deniz Börülcesi <i>· limon</i></li>
+          <li>Karides Buğulama <i>· sıcak</i></li>
+        </ul>
+      </article>
+      <article class="service reveal">
+        <div class="service__num">— II.</div>
+        <h3>Günün Balığı</h3>
+        <p>Her sabah Bodrum hâlinden seçim. Tezgâhta ne varsa o akşam masada — fiyat günlüktür.</p>
+        <ul>
+          <li>Levrek <i>· ızgara</i></li>
+          <li>Çupra <i>· tuzda</i></li>
+          <li>Barbun <i>· tava</i></li>
+          <li>Lüfer <i>· mevsiminde</i></li>
+          <li>Mercan <i>· buğulama</i></li>
+          <li>Kalamar <i>· ızgara · kızartma</i></li>
+        </ul>
+      </article>
+      <article class="service reveal">
+        <div class="service__num">— III.</div>
+        <h3>Rakı &amp; Şarap</h3>
+        <p>Yeni Rakı'dan Tekirdağ'a, Bodrum bağlarından küçük üreticilere — kadehten önce buz, sonra su.</p>
+        <ul>
+          <li>Yeni Rakı <i>· 35 / 70</i></li>
+          <li>Tekirdağ Altın Seri <i>· 70</i></li>
+          <li>Cyrus Bağları Beyaz <i>· Bodrum</i></li>
+          <li>Talay Türbe Karası <i>· Bozcaada</i></li>
+          <li>Sevilen Kalecik <i>· İzmir</i></li>
+          <li>Kavaklıdere Egeo <i>· yerli</i></li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="timeline">
+  <div class="wrap">
+    <header class="section-head">
+      <span class="eyebrow">Bir akşamın akışı</span>
+      <h2>On birde açılır, <em>ikide</em> kapanır.</h2>
+      <p>Akşamlar genelde bu ritmi izler — sofranıza göre yavaşlar ya da uzar.</p>
+    </header>
+    <div class="timeline__grid">
+      <div class="tl reveal">
+        <div class="tl__time">18:00</div>
+        <div class="tl__title">Açılış</div>
+        <p class="tl__desc">Eskiçeşme'nin sokağında ışıklar yanar, ilk masalar kurulur.</p>
+      </div>
+      <div class="tl reveal">
+        <div class="tl__time">19:30</div>
+        <div class="tl__title">Mezeler</div>
+        <p class="tl__desc">Soğuk tabağı, ilk rakı, ekmek ve zeytinyağı.</p>
+      </div>
+      <div class="tl reveal">
+        <div class="tl__time">21:00</div>
+        <div class="tl__title">Balık</div>
+        <p class="tl__desc">Tezgâhtan seçim — levrek, çupra ya da o gün gelen.</p>
+      </div>
+      <div class="tl reveal">
+        <div class="tl__time">22:30</div>
+        <div class="tl__title">Sohbet</div>
+        <p class="tl__desc">Karpuz, beyaz peynir, ikinci rakı; müzik sakin.</p>
+      </div>
+      <div class="tl reveal">
+        <div class="tl__time">01:00</div>
+        <div class="tl__title">Son Söz</div>
+        <p class="tl__desc">Türk kahvesi, son rakı, hesap istemeden gelir.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about">
+  <div class="wrap about__grid">
+    <div class="about__text reveal">
+      <span class="eyebrow">Hikâye</span>
+      <h2>Bir sokakta, <em>on beş yıl</em> aynı sofra.</h2>
+      <p>2009'da Kaya Bey, ailenin Karadeniz'den getirdiği balıkçılık geleneğini Bodrum'a taşıdı. Eskiçeşme'nin köşesindeki küçük dükkân, on beş yıl içinde mahallenin sabit adresi oldu — turist sezonu açılır kapanır, masalar değişmez.</p>
+      <p>Sahil mekanlarından farklıyız: kalabalık yok, müzik dağılmıyor, balık her sabah aynı tezgâhtan geliyor. İçeride servis, dışarıda paket — ikisi de tek elden.</p>
+    </div>
+    <aside class="about__panel reveal">
+      <h4>Eskiçeşme · Büyük İskender Cd.</h4>
+      <small>2009'dan beri · Aile işletmesi</small>
+      <dl>
+        <div><dt>Mahalle</dt><dd>Eskiçeşme</dd></div>
+        <div><dt>Mutfak</dt><dd>Ege · Karadeniz</dd></div>
+        <div><dt>Servis</dt><dd>İçeride · Paket</dd></div>
+        <div><dt>Kişi başı</dt><dd>₺600 — ₺1.000</dd></div>
+        <div><dt>Rezervasyon</dt><dd>Tavsiye edilir</dd></div>
+      </dl>
+    </aside>
+  </div>
+</section>
+
+<section class="proof">
+  <div class="wrap">
+    <header class="section-head">
+      <span class="eyebrow">Misafirler</span>
+      <h2>Söyledikleri <em>birkaç söz.</em></h2>
+      <p>113 yorum üzerinden <em>4,4</em> — Google.</p>
+    </header>
+    <div class="proof__grid">
+      <blockquote class="quote reveal">
+        <p>"Dalış kulübü olarak akşam yemeği organize ettik. Fix menü anlaştık; ara sıcaklar ve ana yemekten memnun kaldık. Yakın bir yerde başka bu tarz mekan zaten yok."</p>
+        <footer>— Fethi Tansel · Yerel Rehber</footer>
+      </blockquote>
+      <blockquote class="quote reveal">
+        <p>"Bodrum'da onca şatafatlı samimiyetin olmadığı mekanların aksine, bir kere gidince sürekli gitmek isteyeceksiniz. Mezeleri ve sıcak menü oldukça başarılı."</p>
+        <footer>— Bade Simge · Google Yorumu</footer>
+      </blockquote>
+      <blockquote class="quote reveal">
+        <p>"Siz rakınızı yudumlarken arkadan çalan müzik ruhunuza eşlik ediyor. Sokak boyu mekânlar var, biz buraya geri dönüyoruz."</p>
+        <footer>— Mete &amp; Selin · Mayıs 2024</footer>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="final" id="iletisim">
+  <div class="wrap">
+    <h2>Bir akşam <em>uğrayın,</em> sofrayı görün.</h2>
+    <p>Hafta sonu masaları erken dolar — rezervasyonunuzu telefonla, WhatsApp ile ya da kapıdan yapabilirsiniz.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="https://wa.me/905439546542" target="_blank" rel="noopener">WhatsApp · 0543 954 65 42</a>
+      <a class="btn btn-ghost" href="tel:+905439546542">Telefonla Ara</a>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap foot__inner">
+    <span>© 2026 Kaya Balık Meze Evi · Eskiçeşme, Büyük İskender Cd. No:27.A D:1, Bodrum</span>
+    <span>0543 954 65 42 · Türkçe · English</span>
+  </div>
+</footer>
+
+<script>
+const io = new IntersectionObserver((es) => {
+  es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+document.querySelectorAll('.lang button').forEach(b => b.addEventListener('click', () => {
+  document.querySelectorAll('.lang button').forEach(x => x.classList.remove('is-active'));
+  b.classList.add('is-active');
+}));
+</script>
+</body>
+</html>
